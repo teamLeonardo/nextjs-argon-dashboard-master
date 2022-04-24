@@ -10365,10 +10365,10 @@ a.text-danger:hover, a.text-danger:focus {
   color: #d40b33 !important; }
 
 .text-light {
-  color: #adb5bd !important; }
+  color: #FFFFFF !important; }
 
 a.text-light:hover, a.text-light:focus {
-  color: #838f9b !important; }
+  color: #FFFFFF !important; }
 
 .text-dark {
   color: #212529 !important; }
@@ -11500,7 +11500,7 @@ a.text-gray-dark:hover, a.text-gray-dark:focus {
   color: #17172b !important; }
 
 .text-light {
-  color: #ced4da !important; }
+  color: #FFFFFF !important; }
 
 a.text-light:hover, a.text-light:focus {
   color: #a2aeb9 !important; }

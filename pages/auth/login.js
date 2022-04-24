@@ -17,6 +17,7 @@ import {
 } from "reactstrap";
 // layout for this page
 import Auth from "layouts/Auth.js";
+import AuthCustom from "layouts/AuthCustom";
 
 function Login() {
   return (
@@ -137,6 +138,6 @@ function Login() {
   );
 }
 
-Login.layout = Auth;
+Login.layout = AuthCustom;
 
 export default Login;

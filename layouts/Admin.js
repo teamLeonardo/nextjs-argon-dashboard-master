@@ -8,6 +8,8 @@ import AdminFooter from "components/Footers/AdminFooter.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
 
 import routes from "routes.js";
+import { StyledMainContainer } from "customStyled/StyledMainContainer";
+import Header from "components/Headers/Header";
 
 function Admin(props) {
   // used for checking current route
@@ -37,13 +39,13 @@ function Admin(props) {
           imgAlt: "...",
         }}
       />
-      <div className="main-content" ref={mainContentRef}>
+      <StyledMainContainer className="main-content" ref={mainContentRef}>
         <AdminNavbar {...props} brandText={getBrandText()} />
         {props.children}
         <Container fluid>
           <AdminFooter />
         </Container>
-      </div>
+      </StyledMainContainer>
     </>
   );
 }

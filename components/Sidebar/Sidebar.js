@@ -7,17 +7,11 @@ import { PropTypes } from "prop-types";
 
 // reactstrap components
 import {
-  Button,
-  Card,
-  CardHeader,
-  CardBody,
-  CardTitle,
   Collapse,
   DropdownMenu,
   DropdownItem,
   UncontrolledDropdown,
   DropdownToggle,
-  FormGroup,
   Form,
   Input,
   InputGroupAddon,
@@ -25,16 +19,14 @@ import {
   InputGroup,
   Media,
   NavbarBrand,
-  Navbar,
   NavItem,
-  NavLink,
   Nav,
-  Progress,
-  Table,
   Container,
   Row,
   Col,
+  Button,
 } from "reactstrap";
+import { StyledSideBard } from "customStyled/styledSideBard";
 
 var ps;
 
@@ -60,14 +52,17 @@ function Sidebar(props) {
       return (
         <NavItem key={key} active={activeRoute(prop.layout + prop.path)}>
           <Link href={prop.layout + prop.path}>
-            <NavLink
-              href="#pablo"
+
+            <Button
               active={activeRoute(prop.layout + prop.path)}
               onClick={closeCollapse}
+              block
             >
-              <i className={prop.icon} />
+              <div className="signo-btn" />
+
               {prop.name}
-            </NavLink>
+
+            </Button>
           </Link>
         </NavItem>
       );
@@ -76,13 +71,13 @@ function Sidebar(props) {
   const { routes, logo } = props;
   let navbarBrand = (
     <NavbarBrand href="#pablo" className="pt-0">
-      <img alt={logo.imgAlt} className="navbar-brand-img" src={logo.imgSrc} />
+      {/* <img alt={logo.imgAlt} className="navbar-brand-img" src={logo.imgSrc} /> */}
     </NavbarBrand>
   );
   return (
-    <Navbar
-      className="navbar-vertical fixed-left navbar-light bg-white"
-      expand="md"
+    <StyledSideBard
+      className="navbar-vertical fixed-left navbar-dark bg-indigo"
+      expand="lg"
       id="sidenav-main"
     >
       <Container fluid>
@@ -218,41 +213,11 @@ function Sidebar(props) {
           {/* Navigation */}
           <Nav navbar>{createLinks(routes)}</Nav>
           {/* Divider */}
-          <hr className="my-3" />
-          {/* Heading */}
-          <h6 className="navbar-heading text-muted">Documentation</h6>
-          {/* Navigation */}
-          <Nav className="mb-md-3" navbar>
-            <NavItem>
-              <NavLink href="https://www.creative-tim.com/learning-lab/nextjs/overview/argon-dashboard?ref=njsad-admin-sidebar">
-                <i className="ni ni-spaceship" />
-                Getting started
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://www.creative-tim.com/learning-lab/nextjs/colors/argon-dashboard?ref=njsad-admin-sidebar">
-                <i className="ni ni-palette" />
-                Foundation
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://www.creative-tim.com/learning-lab/nextjs/avatar/argon-dashboard?ref=njsad-admin-sidebar">
-                <i className="ni ni-ui-04" />
-                Components
-              </NavLink>
-            </NavItem>
-          </Nav>
-          <Nav className="mb-md-3" navbar>
-            <NavItem className="active-pro active">
-              <NavLink href="https://www.creative-tim.com/product/argon-dashboard-pro-react?ref=njsad-admin-sidebar">
-                <i className="ni ni-spaceship" />
-                Upgrade to PRO
-              </NavLink>
-            </NavItem>
-          </Nav>
+          {/* <hr className="my-3" /> */}
+
         </Collapse>
       </Container>
-    </Navbar>
+    </StyledSideBard>
   );
 }
 

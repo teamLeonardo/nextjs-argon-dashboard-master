@@ -17,18 +17,19 @@ import {
   Container,
   Media,
 } from "reactstrap";
+import { StyledNavBar } from "customStyled/StyledNavBar";
 
 function AdminNavbar({ brandText }) {
   return (
     <>
-      <Navbar className="navbar-top navbar-dark" expand="md" id="navbar-main">
+      <StyledNavBar className="navbar-top navbar-light" expand="md" id="navbar-main">
         <Container fluid>
           <Link href="/admin/dashboard">
-            <a className="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block">
+            <a className="h4 mb-0 text-indigo text-uppercase d-none d-lg-inline-block">
               {brandText}
             </a>
           </Link>
-          <Form className="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
+          <Form className="navbar-search navbar-search-light form-inline mr-3 d-none d-md-flex ml-lg-auto">
             <FormGroup className="mb-0">
               <InputGroup className="input-group-alternative">
                 <InputGroupAddon addonType="prepend">
@@ -94,7 +95,7 @@ function AdminNavbar({ brandText }) {
             </UncontrolledDropdown>
           </Nav>
         </Container>
-      </Navbar>
+      </StyledNavBar>
     </>
   );
 }

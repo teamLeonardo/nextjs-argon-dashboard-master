@@ -1,8 +1,18 @@
 import "assets/css/home.css"
+import "boot/css/bootstrap.min.css"
 import AuthCustom from "layouts/AuthCustom";
 function Home() {
     return <>
-        <div class="header-home">
+        <div className="container ron">
+            <div class="conteiner-title col-md-12">
+                <h1>¡Bienvenid@!</h1>
+            </div>
+            <div className="col-xs-12">
+                <p class="title-p">Al sistema Integral de Gestión de clubes de ciencia y tecnología (SIGECCYT) del CONCYTEC, que tiene como finalidad
+                    pública brindar información detallada a los usuarios responsables de la implementación de los clubes a nivel nacional. </p>
+            </div>
+        </div>
+        {/* <div class="header-home">
             <img
                 alt="..."
                 src={require("assets/img/icons/common/SIGECCYT.png")} class="logo" />
@@ -44,8 +54,9 @@ function Home() {
                     <h3 className="text-card">CONCYTEC</h3>
                 </div>
             </div>
-        </div>
-
+        </div> */}
+        <script src="boot/js/jquery.js"></script>
+        <script src="boot/js/bootstrap.min.js"></script>
     </>
 }
 Home.layout = AuthCustom;

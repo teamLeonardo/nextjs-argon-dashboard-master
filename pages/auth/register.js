@@ -16,132 +16,82 @@ import {
   Col,
 } from "reactstrap";
 // layout for this page
-import Auth from "layouts/Auth.js";
 
 function Register() {
   return (
     <>
-      <Col lg="6" md="8">
-        <Card className="bg-secondary shadow border-0">
-          <CardHeader className="bg-transparent pb-5">
-            <div className="text-muted text-center mt-2 mb-4">
-              <small>Sign up with</small>
+      <div class="container bg-fondo">
+        <div class="row align-items-center">
+          <div class="col p-5 rounded-start d-none d-lg-block">
+            <div class="text-start">
+              <h1 class="fs-2 text-center p-5 text-light">Para poder registrarte necesitas saber lo siguiente:
+              </h1>
             </div>
-            <div className="text-center">
-              <Button
-                className="btn-neutral btn-icon mr-4"
-                color="default"
-                href="#pablo"
-                onClick={(e) => e.preventDefault()}
-              >
-                <span className="btn-inner--icon">
-                  <img
-                    alt="..."
-                    src={require("assets/img/icons/common/github.svg")}
-                  />
+            <div class="subtext text-light">
+              <div class="conte-subtext">
+                <span class="fs-1">1</span>
+                <span>
+                  El Club de Ciencia y Tecnología tiene un nombre que lo identifica, deberá
+                  estar relacionada
+                  con temas cientificos y/o con nombres de científicos que hayan aportado el desarrollo del
+                  conocimiento. <br /><b>Ejemplo: Albert Einsten</b>
                 </span>
-                <span className="btn-inner--text">Github</span>
-              </Button>
-              <Button
-                className="btn-neutral btn-icon"
-                color="default"
-                href="#pablo"
-                onClick={(e) => e.preventDefault()}
-              >
-                <span className="btn-inner--icon">
-                  <img
-                    alt="..."
-                    src={require("assets/img/icons/common/google.svg")}
-                  />
+                <br />
+                <span class="fs-1">2</span>
+                <span>
+                  El Club de Ciencia y Tecnología tiene un nombre que lo identifica, deberá
+                  Que los correos registrados solo son válidos en GMAIL
+                  <br />
+                  <b>Ejemplo: ccytalberteinsten@gmail.com</b>
                 </span>
-                <span className="btn-inner--text">Google</span>
-              </Button>
-            </div>
-          </CardHeader>
-          <CardBody className="px-lg-5 py-lg-5">
-            <div className="text-center text-muted mb-4">
-              <small>Or sign up with credentials</small>
-            </div>
-            <Form role="form">
-              <FormGroup>
-                <InputGroup className="input-group-alternative mb-3">
-                  <InputGroupAddon addonType="prepend">
-                    <InputGroupText>
-                      <i className="ni ni-hat-3" />
-                    </InputGroupText>
-                  </InputGroupAddon>
-                  <Input placeholder="Name" type="text" />
-                </InputGroup>
-              </FormGroup>
-              <FormGroup>
-                <InputGroup className="input-group-alternative mb-3">
-                  <InputGroupAddon addonType="prepend">
-                    <InputGroupText>
-                      <i className="ni ni-email-83" />
-                    </InputGroupText>
-                  </InputGroupAddon>
-                  <Input
-                    placeholder="Email"
-                    type="email"
-                    autoComplete="new-email"
-                  />
-                </InputGroup>
-              </FormGroup>
-              <FormGroup>
-                <InputGroup className="input-group-alternative">
-                  <InputGroupAddon addonType="prepend">
-                    <InputGroupText>
-                      <i className="ni ni-lock-circle-open" />
-                    </InputGroupText>
-                  </InputGroupAddon>
-                  <Input
-                    placeholder="Password"
-                    type="password"
-                    autoComplete="new-password"
-                  />
-                </InputGroup>
-              </FormGroup>
-              <div className="text-muted font-italic">
-                <small>
-                  password strength:{" "}
-                  <span className="text-success font-weight-700">strong</span>
-                </small>
               </div>
-              <Row className="my-4">
-                <Col xs="12">
-                  <div className="custom-control custom-control-alternative custom-checkbox">
-                    <input
-                      className="custom-control-input"
-                      id="customCheckRegister"
-                      type="checkbox"
-                    />
-                    <label
-                      className="custom-control-label"
-                      htmlFor="customCheckRegister"
-                    >
-                      <span className="text-muted">
-                        I agree with the{" "}
-                        <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                          Privacy Policy
-                        </a>
-                      </span>
-                    </label>
-                  </div>
-                </Col>
-              </Row>
-              <div className="text-center">
-                <Button className="mt-4" color="primary" type="button">
-                  Create account
-                </Button>
+            </div>
+          </div>
+          <div class="col p-5 rounded-3 bg-light m-5">
+            <div class="text-start">
+              <img src="./IMAGENES/Logo SIGECCYT 4.png" width="30%" alt="" />
+              <img src="./IMAGENES/club.png" width="15%" alt="" />
+            </div>
+            <div class="text-start">
+              <img src="./IMAGENES/concytec.png" width="15%" alt="" />
+            </div>
+            <div class="text-end">
+              <img src="./IMAGENES/IMG4.png" width="15%" alt="" />
+            </div>
+            <h2 class="fw-bold text-start py-5">Registro como CCYT</h2>
+            <div action="#">
+              <div class="mb-4">
+                <input type="name" class="form-control" name="password" placeholder="Nombre del CCYT" />
               </div>
-            </Form>
-          </CardBody>
-        </Card>
-      </Col>
+              <div class="mb-4">
+                <input type="email" class="form-control" name="email" placeholder="Correo electrónico" />
+              </div>
+              <div class="mb-4" />
+              <input type="password" class="form-control" name="password" placeholder="Contraseña" />
+            </div>
+
+            <div class="mb-4 form-check" >
+              <input type="checkbox" name="connecd" class="form-check-input" />
+              <label for="connected" class="form-check-label">
+                <a href="#">
+                  Aceptar los terminos y
+                  Condiciones</a>
+              </label>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn-primary">Registrarse</button>
+            </div>
+            <div class="my-3 text-center">
+              <span>
+                ¿Ya tienes una cuenta?<a href="#">Iniciar Sesión</a>
+              </span>
+              <br />
+            </div>
+          </div>
+        </div >
+      </div >
     </>
   );
 }
-
-Register.layout = Auth;
 
 export default Register;

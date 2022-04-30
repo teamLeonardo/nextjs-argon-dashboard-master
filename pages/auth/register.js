@@ -20,6 +20,7 @@ import {
 import AuthCustom from "layouts/AuthCustom";
 // layout for this page
 import styled from "styled-components"
+import { ContainerImg } from "components/ConteinerImg";
 
 
 const StyledForm = styled(Form)`
@@ -47,6 +48,7 @@ function Register() {
   return (
     <Container fluid className="vh-100 row align-items-center ">
       <Col className="p-5 rounded-start d-none d-lg-block text-white">
+        <ContainerImg></ContainerImg>
         <div className="text-start">
           <h1 className="fs-3 text-center p-5 ">
             Para poder registrarte necesitas saber lo siguiente:

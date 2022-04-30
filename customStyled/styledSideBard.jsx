@@ -4,6 +4,14 @@ import styled from 'styled-components'
 export const StyledSideBard = styled(Navbar)`
     
     background-color:#7A2B91 !important;
+    .navbar-brand {
+        position: relative;
+        width: 263px;
+        height: 100px;
+
+        background: #FFFFFF;
+        border-radius: 17px;
+    }
     ul.navbar-nav {
         li.nav-item {
             width: fit-content !important;

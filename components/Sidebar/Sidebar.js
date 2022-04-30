@@ -71,6 +71,7 @@ function Sidebar(props) {
   const { routes, logo } = props;
   let navbarBrand = (
     <NavbarBrand href="#pablo" className="pt-0">
+
       {/* <img alt={logo.imgAlt} className="navbar-brand-img" src={logo.imgSrc} /> */}
     </NavbarBrand>
   );
@@ -213,7 +214,7 @@ function Sidebar(props) {
           {/* Navigation */}
           <Nav navbar>{createLinks(routes)}</Nav>
           {/* Divider */}
-          {/* <hr className="my-3" /> */}
+          <hr className="my-3" />
 
         </Collapse>
       </Container>
